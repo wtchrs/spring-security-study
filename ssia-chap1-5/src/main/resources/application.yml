@@ -1,0 +1,25 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  sql:
+    init:
+      mode: always
+
+logging:
+  level:
+    root: info
+
+server:
+  port: 8443
+  ssl:
+    # copy your certificate key file into resource directory, or remove ssl options.
+    key-store: classpath:certificate.p12
+    key-store-type: PKCS12
+    key-store-password: ${CERT_KEY_PASSWORD}
+  error:
+    include-stacktrace: never
