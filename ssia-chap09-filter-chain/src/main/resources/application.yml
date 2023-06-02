@@ -1,0 +1,15 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:certificate.p12
+    key-store-type: PKCS12
+    key-store-password: ${CERT_KEY_PASSWORD}
+  error:
+    include-stacktrace: never
+
+authorization:
+  key: SD9cICjl1e
