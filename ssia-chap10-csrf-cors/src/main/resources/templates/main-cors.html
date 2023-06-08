@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cors Test</title>
+
+    <script>
+        const http = new XMLHttpRequest()
+        const url = 'http://127.0.0.1:8080/cors/test'
+        http.open("POST", url)
+        http.send()
+
+        http.onreadystatechange = _ => {
+            document
+                .getElementById("output")
+                .innerHTML = http.responseText
+        }
+    </script>
+
+</head>
+<body>
+<div id="output"></div>
+</body>
+</html>
