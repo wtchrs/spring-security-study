@@ -1,0 +1,35 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  sql:
+    init:
+      mode: always
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  sendgrid:
+    api-key: ${SENDGRID_API_KEY}
+
+logging:
+  level:
+    root: info
+    sql: debug
+    org.hibernate.orm.jdbc.bind: trace
+
+server:
+  port: 8081
+  error:
+    include-stacktrace: never
+
+sendgrid:
+  from: ${SENDGRID_FROM}
+  enable: ${SENDGRID_ENABLE}

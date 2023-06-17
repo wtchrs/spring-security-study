@@ -1,0 +1,15 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+
+server:
+  error:
+    include-stacktrace: never
+
+auth:
+  server:
+    base-url: http://localhost:8081
+
+jwt:
+  signing:
+    key: ${JWT_SIGNING_KEY}
