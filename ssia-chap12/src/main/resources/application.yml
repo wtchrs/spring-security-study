@@ -1,0 +1,19 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ${OAUTH2_CLIENT_ID}
+            client-secret: ${OAUTH2_CLIENT_SECRET}
+
+logging:
+  level:
+    root: info
+
+server:
+  error:
+    include-stacktrace: never
