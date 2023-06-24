@@ -1,0 +1,4 @@
+rootProject.name = 'SpringAuthServerExample'
+include 'AuthorizationServer'
+include 'ResourceServer'
+include 'ApiClientServer'
