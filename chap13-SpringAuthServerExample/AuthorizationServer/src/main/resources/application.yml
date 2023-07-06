@@ -1,10 +1,7 @@
-spring:
-  config:
-    import: optional:file:.env[.properties]
-
 logging:
   level:
     root: info
+    org.springframework.security: trace
 
 server:
   port: 9000
