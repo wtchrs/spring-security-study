@@ -1,4 +1,4 @@
-# Chapter 13 - OAuth 2 authorization server
+# Chapter 13 - OAuth 2 authorization server (with Password Grant Type)
 
 ## See also
 
