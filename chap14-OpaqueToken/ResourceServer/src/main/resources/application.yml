@@ -1,0 +1,13 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        opaquetoken:
+          client-id: resourceserver
+          client-secret: rssecret
+          introspection-uri: http://auth-server:9000/oauth2/introspect
+
+server:
+  port: 8090
+  error:
+    include-stacktrace: never

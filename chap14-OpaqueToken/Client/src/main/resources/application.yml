@@ -1,0 +1,24 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          client-oidc:
+            provider: spring
+            client-id: client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/{registrationId}
+            scope: openid,time:read
+            client-name: client-oidc
+        provider:
+          spring:
+            issuer-uri: http://auth-server:9000
+
+logging:
+  level:
+    org.springframework.security: debug
+
+server:
+  error:
+    include-stacktrace: never

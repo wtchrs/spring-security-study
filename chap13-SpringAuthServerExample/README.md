@@ -2,8 +2,9 @@
 
 ## Getting started
 
-- Add an entry to your machine's /etc/hosts file: `127.0.0.1 auth-server`. This is necessary to prevent session cookie
-  overwrites between the authorization server and API client server when running both servers on your local PC.
+- Add an entry to your machine's /etc/hosts file: `127.0.0.1 auth-server`. This step is necessary to prevent session
+  cookie from being overwritten between the authorization server and API client server when running both servers on your
+  local PC.
 
 ## See also
 

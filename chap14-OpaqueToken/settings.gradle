@@ -1,0 +1,4 @@
+rootProject.name = 'ssia'
+include 'AuthorizationServer'
+include 'ResourceServer'
+include 'Client'
